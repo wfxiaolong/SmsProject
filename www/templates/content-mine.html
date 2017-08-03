@@ -1,0 +1,54 @@
+<ion-header-bar align-title="center" class="bar-stable">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-left" ng-click="$ionicGoBack()">
+        </button>
+    </div>
+    <div ng-switch="type">
+        <div ng-switch-when="about">
+            <div class="h1 title login-title" >关于我们</div>
+        </div>
+        <div ng-switch-when="user">
+            <div class="h1 title login-title" >用户须知</div>
+        </div>
+        <div ng-switch-when="userprotocol">
+            <div class="h1 title login-title" >用户协议</div>
+        </div>
+        <div ng-switch-when="private">
+            <div class="h1 title login-title" >隐私政策</div>
+        </div>
+    </div>
+</ion-header-bar>
+<ion-view>
+    <ion-content style="padding:5px;">
+        <p ng-switch="type">
+            <span ng-switch-when="about">
+                ©2001-2017 深圳市易讯天空网络技术有限公司 版权所有  股票代码：WBAI  </br>客服热线：4000-500-500  备案：粤ICP备11007122号-2    </br>增值电信业务经营许可证：粤B2-20070298    </br>
+                粤网文：[2013]0802-202号  粤公网安备 44030702000009号    </br>500.com郑重提示：彩票有风险，投注需谨慎  不向未满18周岁的青少年出售彩票
+            </span>
+            <span ng-switch-when="user">
+               500.com郑重提示：彩票有风险，投注需谨慎  不向未满18周岁的青少年出售彩票 </br>
+               本应用不对外售彩票。
+            </span>
+            <span ng-switch-when="userprotocol">
+                1 用户明确同意其使用本站网络服务所存在的风险及一切后果将完全由用户本人承担，我公司对此不承担任何责任。</br> 
+2 本站无法保证网络服务一定能满足用户的要求，也不保证网络服务的及时性、安全性、准确性。 </br>
+3 本站不保证为方便用户而设置的外部链接的准确性和完整性，同时，对于该等外部链接指向的不由本站实际控制的任何网页上的内容，本站不承担任何责任。</br>
+4 对于因不可抗力或本站不能控制的原因造成的网络服务中断或其它缺陷，本站不承担任何责任，但将尽力减少因此而给用户造成的损失和影响。</br>
+5 对于站向用户提供的下列产品或者服务的质量缺陷本身及其引发的任何损失，本站无需承担任何责任：</br>
+(1)本站向用户免费提供的各项网络服务； </br>
+(2)本站向用户赠送的任何产品或者服务。</br>
+6 本站有权于任何时间暂时或永久修改或终止本服务(或其任何部分)，而无论其通知与否，本站对用户和任何第三人均无需承担任何责任。</br>
+            </span>
+            <span ng-switch-when="private">
+            本应用不对外公开或向第三方提供单个用户的注册资料及用户在使用网络服务时存储在本站的非公开内容，但下列情况除外：</br>
+(1)事先获得用户的明确授权； </br>
+(2)根据有关的法律法规要求；</br>
+(3)按照相关政府主管部门的要求；</br>
+(4)为维护社会公众的利益。
+            </span>
+            <span ng-switch-default>
+               其他内容
+            </span>
+        </p>
+    </ion-content>
+</ion-view>

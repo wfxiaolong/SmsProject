@@ -1,0 +1,36 @@
+<ion-header-bar align-title="center" class="bar-stable">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-left" ng-click="$ionicGoBack()">
+        </button>
+    </div>
+    <div class="h1 title login-title" >资讯详情</div>
+    <div class="buttons">
+        <a class="button login-register" ng-click="addcomment()">
+            评论
+        </a>
+    </div>
+</ion-header-bar>
+<ion-view>
+    <ion-content has-bouncing="true" overflow-scroll="false">
+        <div class="list card">
+            <div class="item item-body">
+                <img class="full-image" src="{{item.icon}}">
+                <h2 class="dm-nowrap-2">{{item.title}}</h2>
+            </div>
+            <div class="item item-body">
+                <h2 class="dm-nowrap-2" style="margin: 0px;">详情介绍：</h2>
+                <p>{{item.content}}</p>
+            </div>
+            <h3>&nbsp;&nbsp;评论：</h3>
+            <div>
+                <ul class="list">
+                    <li style="padding: 0;margin-bottom: .5rem; margin-left:.5rem; position: relative;border-bottom: 1px solid lightgray;">
+                        <img src="img/portrait.jpg" style="position: absolute;top: 0px;left: 0px; width: 32px;height: 32px;border-radius: 32px;">
+                        <span style="line-height: 32px;left: 50px;top: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;500问卷调查：资讯留言功能开启了！！</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

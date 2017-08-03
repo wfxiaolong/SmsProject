@@ -1,0 +1,40 @@
+<ion-header-bar align-title="center" class="bar-stable">
+    <div class="h1 title login-title" >资讯</div>
+    <button class="button button-icon ion-ios-search" ng-click="search()">
+    </button>
+</ion-header-bar>
+<ion-view>
+    <ion-content has-bouncing="true" overflow-scroll="false">
+        <ion-refresher on-refresh="doRefresh()" pulling-text="下拉刷新" refreshing-text="正在刷新" refreshing-icon="ion-loading-b"></ion-refresher>
+
+        <ion-slide-box active-slide="myActiveSlide"  style="width: 100%;height: 160px;">
+            <ion-slide>
+                <div class="box" style="background-image: url('img/banner1.jpg');background-size: 100% 100%; height: 100%;" ng-click="getDetail()">
+                    <div style="width:100%;height:44px;position:absolute;bottom:0;left:0;background:gray;opacity:0.3;"></div>
+                    <p style="text-align:center;position:absolute;bottom:2px;left:0;color:white;width:100%;">球球讲堂，涨姿势</p>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box yellow" style="background-image: url('img/banner2.jpg');background-size: 100% 100%; height: 100%;" ng-click="getDetail()">
+                    <div style="width:100%;height:44px;position:absolute;bottom:0;left:0;background:gray;opacity:0.3;"></div>
+                    <p style="text-align:center;position:absolute;bottom:2px;left:0;color:white;width:100%;">数字彩票</p>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box pink" style="background-image: url('img/banner3.jpg');background-size: 100% 100%; height: 100%;" ng-click="getDetail()">
+                    <div style="width:100%;height:44px;position:absolute;bottom:0;left:0;background:gray;opacity:0.3;"></div>
+                    <p style="text-align:center;position:absolute;bottom:2px;left:0;color:white;width:100%;">竞猜返现</p>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+
+        <div class="card" style="margin-top: 10px;margin-bottom:0px;" ng-repeat="item in dataArr">
+            <a class="item item-thumbnail-left" ng-click="getContent($index)">
+                <img ng-src="{{item.icon}}">
+                <h2>{{item.title}}</h2>
+                <p>{{item.content}}</p>
+                <p style="margin-top: 13px;text-align: right;font-size: small;">{{item.date}}</p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>
